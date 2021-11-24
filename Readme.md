@@ -3,6 +3,7 @@
 ## 目標
 
 Vite というビルドツールを使って，Vue (Vue3) + Router (Router4) のアプリを作ります．
+
 その後，TailWind というCSSフレームワークを導入して，GitHub Pages で公開できるようにします．
 
 ## 作成方法
@@ -25,7 +26,8 @@ Voltaでのインストールは，[こちら](https://zenn.dev/taichifukumoto/a
 
 yarn で vite のプロジェクトを作成し，
 ルートディレクトリをそのプロジェクトに変えます．
-そのあと，`yarn install` で yarn をインストールします．
+
+その後，`yarn install` で yarn をインストールします．
 
 まとめると，
 
