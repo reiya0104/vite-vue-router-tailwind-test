@@ -4,4 +4,4 @@ dist
 dist-ssr
 *.local
 .vscode
-*.log
+yarn-error.log
