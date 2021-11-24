@@ -294,7 +294,7 @@ export default router;
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   </div>
 </template>
 
@@ -550,7 +550,7 @@ button {
   <div class="home">
 -   <img alt="Vue logo" src="../assets/logo.png" />
 +   <img alt="Vue logo" class="mx-auto" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   </div>
 </template>
 
@@ -573,7 +573,7 @@ export default {
 <template>
   <div class="home">
     <img alt="Vue logo" class="mx-auto" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   </div>
 </template>
 
