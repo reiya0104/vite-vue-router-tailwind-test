@@ -6,16 +6,19 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@vue/compiler-sfc": "3",
     "axios": "^0.24.0",
-    "vue": "3.0.4",
+    "vue": "3",
     "vue-router": "4.0.12",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "3.0.4",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
     "sass": "^1.43.4",
     "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
+    "tailwindcss": "^2.2.19",
     "typescript": "^4.5.2",
     "vite": "^1.0.0-rc.13"
   }
