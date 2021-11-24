@@ -320,7 +320,7 @@ export default {
 
 一度ここで，GitHub Pages で投稿してみましょう．
 
-`./vite.config.ts` を次のように変更します．
+まず，`./vite.config.ts` を次のように変更します．
 
 ```diff
 import { defineConfig } from 'vite'
@@ -365,6 +365,18 @@ yarn build
 ```
 
 すると，`docs` フォルダができ，`index.html` 等が作成されたかと思います．
+
+次に，GitHub の設定をします．
+GitHubにPushしていない人はこのタイミングでしておきましょう．
+
+次の手順でGitHub Pages を有効にします．
+
+1. GitHub のレポジトリページの `Setting` に移ります．
+2. 左側のタブから `Pages` を選択します．
+3. 下の写真(一枚目) の `None` を `master` に，その後出てくる `📁/(root)` を `docs` に変更して保存する(写真二枚目)  ![GitHub Pages 1](./images/github-pages.png) `Save` を押して保存 ![GitHub Pages 2](./images/github-pages-2.png)
+4. 下の方にある `Enforce HTTPS` にチェックが付いていなければチェック☑する．
+
+これでしばらく待つと，指定されたURLで今回のページを見ることができます．
 
 ### Step.5 TailWind の導入
 
