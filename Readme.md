@@ -330,7 +330,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   // 本番時はgithubリポジトリをルートパスにする
 +  base: (process.env.NODE_ENV === 'production')
-+    ? '/latex-to-web/' : './',
++    ? '/[プロジェクト名]/' : './',
 +  build: {
 +    outDir: 'docs'
 +  },
@@ -348,13 +348,23 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   // 本番時はgithubリポジトリをルートパスにする
   base: (process.env.NODE_ENV === 'production')
-    ? '/latex-to-web/' : './',
+    ? '/[プロジェクト名]/' : './',
   build: {
     outDir: 'docs'
   },
   plugins: [vue()]
 })
 ```
+
+とします．
+
+そのあと，コマンドラインで次を実行します．
+
+```shell
+yarn build
+```
+
+すると，`docs` フォルダができ，`index.html` 等が作成されたかと思います．
 
 ### Step.5 TailWind の導入
 
