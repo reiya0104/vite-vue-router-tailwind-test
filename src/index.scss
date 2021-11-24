@@ -1,4 +1,24 @@
-/* ./src/index.scss */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply text-3xl;
+  @apply font-bold;
+  @apply my-6;
+}
+
+p {
+  @apply leading-4;
+  @apply my-4;
+}
+
+button {
+  @apply bg-gray-100;
+  @apply hover:bg-gray-200;
+  @apply border-gray-500;
+  @apply border;
+  @apply px-2;
+  @apply py-0.5;
+  @apply rounded;
+}

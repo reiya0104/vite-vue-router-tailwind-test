@@ -1,26 +1,27 @@
 {
   "name": "vite-vue-router-tailwind-test",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
-    "@vue/compiler-sfc": "3",
     "axios": "^0.24.0",
-    "vue": "3",
-    "vue-router": "4.0.12",
+    "vue": "^3.2.16",
+    "vue-router": "4",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.10.0",
+    "@vitejs/plugin-vue": "^1.9.3",
     "autoprefixer": "^10.4.0",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.0",
     "sass": "^1.43.4",
     "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
     "tailwindcss": "^2.2.19",
-    "typescript": "^4.5.2",
-    "vite": "2"
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vue-tsc": "^0.3.0"
   }
 }

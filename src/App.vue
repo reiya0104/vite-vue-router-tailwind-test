@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/hoge">Hoge</router-link>
+    <router-link to="/about">About</router-link>
   </div>
   <router-view/>
 </template>
@@ -11,23 +11,21 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply text-center;
-  /* color: #2c3e50; */
-  @apply text-blue-900;
-  @apply mt-16;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 
 #nav {
-  @apply p-8;
+  padding: 30px;
 }
 
 #nav a {
-  @apply font-bold;
-  @apply text-blue-900;
+  font-weight: bold;
+  color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-  @apply bg-green-500;
+  color: #42b983;
 }
 </style>
-

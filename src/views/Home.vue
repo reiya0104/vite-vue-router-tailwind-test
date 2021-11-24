@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" class="m-auto my-5" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="Vue logo" class="mx-auto" src="../assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   </div>
 </template>
 
