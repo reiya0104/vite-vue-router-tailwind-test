@@ -28,7 +28,7 @@ yarn で vite のプロジェクトを作成し，
 yarn create @vitejs/app [プロジェクト名]
 ```
 
-(質問は `vue` $\to$ `vue-ts` と答えます．)
+(質問は `vue` → `vue-ts` と答えます．)
 
 ```shell
 cd [プロジェクト名]
@@ -44,7 +44,7 @@ yarn install
 yarn create @vitejs/app vite-vue-router-tailwind-test
 ```
 
-(質問は `vue` $\to$ `vue-ts` と答えます．)
+(質問は `vue` → `vue-ts` と答えます．)
 
 ```shell
 cd vite-vue-router-tailwind-test
