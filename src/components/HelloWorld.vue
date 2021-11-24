@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 class="msg">{{ msg }}</h1>
   <button class="btn" @click="count++">count is: {{ count }}</button>
   <p>Edit <code class="my-code">components/HelloWorld.vue</code> to test hot module replacement.</p>
 </template>
@@ -19,11 +19,11 @@ export default {
 </script>
 
 <style>
-
-h1 {
-  @apply font-bold;
-  @apply text-4xl;
+.msg {
+    @apply font-bold;
+    @apply text-4xl;
 }
+
 
 .btn {
   @apply text-white;
