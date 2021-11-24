@@ -156,15 +156,15 @@ root
 
 の5つのファイルをそれぞれ次のように変更します．
 
-#### `src/main.ts`
+#### `./src/main.ts`
 
 ```diff
 import { createApp } from 'vue'
-+  import router from './router'
++ import router from './router'
 import App from './App.vue'
 
--  createApp(App).mount('#app')
-+  createApp(App).use(router).mount('#app')
+- createApp(App).mount('#app')
++ createApp(App).use(router).mount('#app')
 ```
 
 すなわち
@@ -177,23 +177,23 @@ import App from './App.vue'
 createApp(App).use(router).mount('#app')
 ```
 
-#### `src/App.vue`
+#### `./src/App.vue`
 
 ```diff
--  <script setup lang="ts">
--  // This starter template is using Vue 3 <script setup> SFCs
--  // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
--  import HelloWorld from './components/HelloWorld.vue'
--  </script>
+- <script setup lang="ts">
+- // This starter template is using Vue 3 <script setup> SFCs
+- // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+- import HelloWorld from './components/HelloWorld.vue'
+- </script>
 
 <template>
--    <img alt="Vue logo" src="./assets/logo.png" />
--    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-+  <div id="nav">
-+    <router-link to="/">Home</router-link> |
-+    <router-link to="/hoge">Hoge</router-link>
-+  </div>
-+  <router-view/>
+-   <img alt="Vue logo" src="./assets/logo.png" />
+-   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
++ <div id="nav">
++   <router-link to="/">Home</router-link> |
++   <router-link to="/hoge">Hoge</router-link>
++ </div>
++ <router-view/>
 </template>
 
 
@@ -259,7 +259,7 @@ createApp(App).use(router).mount('#app')
 </style>
 ```
 
-#### `src/router.ts`
+#### `./src/router.ts`
 
 ```ts
 import Vue from 'vue';
@@ -288,12 +288,12 @@ const router = createRouter({
 export default router;
 ```
 
-#### `src/views/Home.vue`
+#### `./src/views/Home.vue`
 
 ```vue
 <template>
   <div class="home">
-    <img alt="Vue logo" class="m-auto my-5" src="../assets/logo.png" />
+    <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -311,7 +311,7 @@ export default {
 </script>
 ```
 
-##### `src/views/About.vue`
+#### `./src/views/About.vue`
 
 ```vue
 <template>
@@ -329,6 +329,8 @@ export default {
 
 まず，`./vite.config.ts` を次のように変更します．
 
+#### `./vite.config.ts`
+
 ```diff
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -336,11 +338,11 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   // 本番時はgithubリポジトリをルートパスにする
-+  base: (process.env.NODE_ENV === 'production')
++ base: (process.env.NODE_ENV === 'poduction')
 +    ? '/[プロジェクト名]/' : './',
-+  build: {
-+    outDir: 'docs'
-+  },
++ build: {
++   outDir: 'docs'
++ },
   plugins: [vue()]
 })
 ```
@@ -386,6 +388,219 @@ GitHubにPushしていない人はこのタイミングでしておきましょ�
 これでしばらく待つと，指定されたURLで今回のページを見ることができます．
 
 ### Step.5 TailWind の導入
+
+TailWind を導入していきます．
+
+まず，次の2つのコマンドを入力します．
+
+tailwind ではなく tailwind**css** であることに注意してください！
+
+```shell
+yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
+```
+
+```shell
+yarn -s run tailwindcss init -p
+```
+
+すると，`postcss.config.js` と `tailwind.config.js` ができます．
+
+`tailwind.config.js` の方を次のように変更します．
+
+#### `./tailwind.config.js`
+
+```diff
+module.exports = {
+- purge: [],
++ purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+すなわち
+
+```js
+module.exports = {
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+次に，`src` ディレクトリ下に `index.scss` を作成し，次のようにします．
+
+#### `./src/index.scss`
+
+```scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+また，このファイルを有効にするために，`src/main.ts` を次のように変更します．
+
+#### `./src/main.ts`
+
+```diff
+import { createApp } from 'vue'
+import router from './router'
+import App from './App.vue'
++ import './index.scss'
+
+createApp(App).use(router).mount('#app')
+```
+
+すなわち
+
+```ts
+import { createApp } from 'vue'
+import router from './router'
+import App from './App.vue'
+import './index.scss'
+
+createApp(App).use(router).mount('#app')
+```
+
+これで，TailWind が有効になったと思います．
+しかし，プレビューを見るとレイアウトが先ほどと異なってしまっています．
+
+最後に， TailWind のコマンドを使ってページを整えます．
+
+### Step.6 TailWind によるページ調整
+
+完全にもとに戻すのはTailWind の標準的な設定では難しいので，できるだけ近づけたものを書いていきます．
+
+まず，`src/index.scss` を次のように調整します．
+
+#### `./src/index.scss`
+
+```diff
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
++ h1 {
++   @apply text-3xl;
++   @apply font-bold;
++   @apply my-6;
++ }
++
++ p {
++   @apply leading-4;
++   @apply my-4;
++ }
++
++ button {
++   @apply bg-gray-100;
++   @apply hover:bg-gray-200;
++   @apply border-gray-500;
++   @apply border;
++   @apply px-2;
++   @apply py-0.5;
++   @apply rounded;
++ }
+```
+
+すなわち
+
+```scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-3xl;
+  @apply font-bold;
+  @apply my-6;
+}
+
+p {
+  @apply leading-4;
+  @apply my-4;
+}
+
+button {
+  @apply bg-gray-100;
+  @apply hover:bg-gray-200;
+  @apply border-gray-500;
+  @apply border;
+  @apply px-2;
+  @apply py-0.5;
+  @apply rounded;
+}
+```
+
+次に，`src/views/Home.vue` の `img` にクラスを追加します．
+
+```diff
+<template>
+  <div class="home">
+-   <img alt="Vue logo" src="../assets/logo.png" />
++   <img alt="Vue logo" class="mx-auto" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+  </div>
+</template>
+
+<script lang="ts">
+// @ is an alias to /src
+import HelloWorld from "../components/HelloWorld.vue";
+
+export default {
+  name: "Home",
+  components: {
+    HelloWorld,
+  },
+};
+</script>
+```
+
+すなわち
+
+```vue
+<template>
+  <div class="home">
+    <img alt="Vue logo" class="mx-auto" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+  </div>
+</template>
+
+<script lang="ts">
+// @ is an alias to /src
+import HelloWorld from "../components/HelloWorld.vue";
+
+export default {
+  name: "Home",
+  components: {
+    HelloWorld,
+  },
+};
+</script>
+```
+
+これでほぼ元通りになりました！
+完全に戻したい方は，検証ツールを見て復元してくださいませ．
+
+おつかれさまでした！
+
+## おわりに
+
+はじめは Vue + Router に TailwWind を導入したかったのですが，マニュアルには Vite というものを使っていて混同しました．
+たくさんの記事を見ながらここまでこれてよかったです．
+
+ありがとうございました．
 
 ## 参考記事
 
