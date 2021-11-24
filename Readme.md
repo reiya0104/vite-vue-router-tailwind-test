@@ -316,6 +316,46 @@ export default {
 
 ここまでを変更すれば，Routerの追加ができたと思います．
 
+### Step.4.5 GitHub Pages で公開する
+
+一度ここで，GitHub Pages で投稿してみましょう．
+
+`./vite.config.ts` を次のように変更します．
+
+```diff
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  // 本番時はgithubリポジトリをルートパスにする
++  base: (process.env.NODE_ENV === 'production')
++    ? '/latex-to-web/' : './',
++  build: {
++    outDir: 'docs'
++  },
+  plugins: [vue()]
+})
+```
+
+すなわち
+
+```ts
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  // 本番時はgithubリポジトリをルートパスにする
+  base: (process.env.NODE_ENV === 'production')
+    ? '/latex-to-web/' : './',
+  build: {
+    outDir: 'docs'
+  },
+  plugins: [vue()]
+})
+```
+
 ### Step.5 TailWind の導入
 
 ## 参考記事
