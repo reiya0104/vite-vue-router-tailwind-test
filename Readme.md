@@ -373,8 +373,8 @@ GitHubにPushしていない人はこのタイミングでしておきましょ�
 
 1. GitHub のレポジトリページの `Setting` に移ります．
 2. 左側のタブから `Pages` を選択します．
-3. 下の写真(一枚目) の `None` を `master` に，その後出てくる `📁/(root)` を `docs` に変更して保存する(写真二枚目)  ![GitHub Pages 1](./images/github-pages.png) `Save` を押して保存 ![GitHub Pages 2](./images/github-pages-2.png)
-4. 下の方にある `Enforce HTTPS` にチェックが付いていなければチェック☑する．
+3. 下の写真(一枚目) の `None` を `master` に，その後出てくる `📁/(root)` を `docs` に変更して保存します(写真二枚目)．  ![GitHub Pages 1](./images/github-pages.png) `Save` を押して保存します． ![GitHub Pages 2](./images/github-pages-2.png)
+4. 下の方にある `Enforce HTTPS` にチェックが付いていなければチェック☑します．
 
 これでしばらく待つと，指定されたURLで今回のページを見ることができます．
 
