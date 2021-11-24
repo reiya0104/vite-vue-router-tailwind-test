@@ -1,5 +1,10 @@
 # vite-vue-router-tailwind-test
 
+## 目標
+
+Vite というビルドツールを使って，Vue + Router のアプリを作ります．
+その後，TailWind というCSSフレームワークを導入して，GitHub Pages で公開できるようにします．
+
 ## 作成方法
 
 ### Step.0 Node.js・npm・yarn のインストール
