@@ -1,4 +1,6 @@
-# vite-vue-router-tailwind-test
+# Vite + Vue3 + Router + TailWind + GitHub Pages の実装
+
+レポジトリ名: vite-vue-router-tailwind-test
 
 ## 目標
 
@@ -191,7 +193,7 @@ createApp(App).use(router).mount('#app')
 -   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 + <div id="nav">
 +   <router-link to="/">Home</router-link> |
-+   <router-link to="/hoge">Hoge</router-link>
++   <router-link to="/about">About</router-link>
 + </div>
 + <router-view/>
 </template>
