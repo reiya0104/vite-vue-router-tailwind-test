@@ -191,7 +191,7 @@ createApp(App).use(router).mount('#app')
 -   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 + <div id="nav">
 +   <router-link to="/">Home</router-link> |
-+   <router-link to="/about">About</router-link>
++   <router-link to="/hoge">Hoge</router-link>
 + </div>
 + <router-view/>
 </template>
@@ -477,7 +477,7 @@ createApp(App).use(router).mount('#app')
 これで，TailWind が有効になったと思います．
 しかし，プレビューを見るとレイアウトが先ほどと異なってしまっています．
 
-これを，TailWind のコマンドを使ってページを整えます．
+ここで， TailWind のコマンドを使ってページを整えます．
 
 ### Step.6 TailWind によるページ調整
 
@@ -591,7 +591,6 @@ export default {
 ```
 
 これでほぼ元通りになりました！
-
 完全に戻したい方は，検証ツールを見て復元してくださいませ．
 
 ### Step.7 GitHub Page を作成する
