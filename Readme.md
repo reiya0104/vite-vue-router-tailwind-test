@@ -2,7 +2,7 @@
 
 ## 目標
 
-Vite というビルドツールを使って，Vue + Router のアプリを作ります．
+Vite というビルドツールを使って，Vue (Vue3) + Router (Router4) のアプリを作ります．
 その後，TailWind というCSSフレームワークを導入して，GitHub Pages で公開できるようにします．
 
 ## 作成方法
