@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2021 reiya0104 (Student)
+This software is released under the MIT License, see LICENSE.
+-->
+
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |

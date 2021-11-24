@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2021 reiya0104 (Student)
+This software is released under the MIT License, see LICENSE.
+-->
+
 <script setup lang="ts">
 import { ref } from 'vue'
 

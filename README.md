@@ -628,3 +628,7 @@ yarn build
 - [vite + vue3 + typescriptでgithub pagesにサイトを公開しよう](https://qiita.com/taka_1156/items/ec0a7ccbfcefd976d32c)
 - [【WEB開発】Vue.js + TailWind CSS 導入編](https://zenn.dev/grimm_marchen/articles/8d297bf7ea1127)
 - [Install Tailwind CSS with Vue 3 and Vite](https://tailwindcss.com/docs/guides/vue-3-vite)
+
+## License
+
+The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.

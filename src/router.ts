@@ -1,5 +1,8 @@
-import Vue from 'vue';
-import * as VueRouter from 'vue-router';
+/**
+ * Copyright (c) 2021 reiya0104 (Student)
+ * This software is released under the MIT License, see LICENSE.
+ */
+
 import { createRouter, createWebHistory } from 'vue-router'
 // HomeビューとAboutビューのインポート
 import Home from './views/Home.vue';
