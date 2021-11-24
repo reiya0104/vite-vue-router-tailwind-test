@@ -115,7 +115,7 @@ root
 |   yarn.lock
 |
 +---node_modules
-|       略
+|       # 略
 |
 +---public
 |       favicon.ico
@@ -149,7 +149,7 @@ root
 
 の5つのファイルをそれぞれ次のように変更します．
 
-`src/main.ts`
+#### `src/main.ts`
 
 ```diff
 import { createApp } from 'vue'
@@ -170,7 +170,7 @@ import App from './App.vue'
 createApp(App).use(router).mount('#app')
 ```
 
-`src/App.vue`
+#### `src/App.vue`
 
 ```diff
 -  <script setup lang="ts">
@@ -199,6 +199,20 @@ createApp(App).use(router).mount('#app')
   color: #2c3e50;
   margin-top: 60px;
 }
+
++  #nav {
++    padding: 30px;
++  }
++
++  #nav a {
++    font-weight: bold;
++    color: #2c3e50;
++  }
++
++  #nav a.router-link-exact-active {
++    color: #42b983;
++  }
+
 </style>
 ```
 
@@ -222,10 +236,23 @@ createApp(App).use(router).mount('#app')
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
 ```
 
-`src/router.ts`
+#### `src/router.ts`
 
 ```ts
 import Vue from 'vue';
@@ -254,7 +281,7 @@ const router = createRouter({
 export default router;
 ```
 
-`src/views/Home.vue`
+#### `src/views/Home.vue`
 
 ```vue
 <template>
@@ -277,7 +304,7 @@ export default {
 </script>
 ```
 
-`src/views/About.vue`
+##### `src/views/About.vue`
 
 ```vue
 <template>
