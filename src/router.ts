@@ -1,18 +1,18 @@
 import Vue from 'vue';
 import * as VueRouter from 'vue-router';
 import { createRouter, createWebHistory } from 'vue-router'
-// HelloWorldコンポーネントとhogeコンポーネントのインポート
-import HelloWorld from './components/HelloWorld.vue';
-import Hoge from './components/Hoge.vue';
+// HomeビューとHogeビューのインポート
+import Home from './views/Home.vue';
+import Hoge from './views/Hoge.vue';
 
 const routes = [
     {
         path: '/',
-        component: HelloWorld  // HelloWorldコンポーネントルーティング
+        component: Home  // Homeビュールーティング
     },
     {
         path: '/hoge',
-        component: Hoge  // Hogeコンポーネントルーティング
+        component: Hoge  // Hogeビュールーティング
     },
 ]
 

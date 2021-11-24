@@ -7,12 +7,12 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "vue": "3.2.20",
+    "vue": "3.0.4",
     "vue-router": "4.0.12",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.4",
+    "@vue/compiler-sfc": "3.0.4",
     "sass": "^1.43.4",
     "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
